@@ -19,24 +19,26 @@ namespace CMP1903_A1_2324
 
         //Methods
 
-
+        //creates three die objects and assigns each of them a random value (1 - 6)
         public void RollDice()
         {
-            Die die1 = new Die();
+            Die die1 = new Die(); //creates die objects using the die class
             Die die2 = new Die();
             Die die3 = new Die();
-            _value1 = die1.Roll();
+            _value1 = die1.Roll(); //assigns each die value a random value using the .Roll() method
             _value2 = die2.Roll();
             _value3 = die3.Roll();
         }
 
-        public int DiceSum()
+        //sums all three dice objects up and returns the total
+        public int DiceSum() 
         {
             RollDice();
-            _total = (_value1 + _value2 + _value3);
+            _total = (_value1 + _value2 + _value3); //assigns the _total variable the values of all three die
             return _total;
         }
 
+        //writes each die value and the total value of the dice to the console and reads it
         public void DisplayDice() 
         {
             DiceSum();
